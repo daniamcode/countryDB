@@ -1,25 +1,51 @@
-import logo from './logo.svg';
+import React, {useState} from "react";
 import './App.css';
+import CharactersQuery from './components/CharactersQuery';
+import Search from './components/Search';
+import { gql, useQuery } from "@apollo/client";
 
+    
 function App() {
+  const CHQuery = gql`
+  {
+    characters {
+      results {
+        id
+        name
+        gender
+        image
+        status
+        species
+      }
+    }
+  }
+`;
+
+  const { loading, error, data } = useQuery(CHQuery);
+
+  const [areaSmaller, setAreaSmaller] = useState(Number.MAX_VALUE)
+  const [areaGreater, setAreaGreater] = useState(0)
+
+  
+  
+  // data?.characters.results.map((character) => {
+  //   let i = 0;
+  //   if(parseInt(character.id) < areaSmaller && 
+  //     parseInt(character.id) > areaGreater) i++
+  //   return i
+  // })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <section className="filters">
+      <h1>FILTERS</h1>
+    <Search setAreaSmaller={setAreaSmaller} setAreaGreater={setAreaGreater}/>
+      <h3>{`Number of results: ${data?.characters.results.length}`}</h3>
+    </section>
+    <section className="main">
+      <CharactersQuery loading={loading} error={error} data={data} areaSmaller={areaSmaller} areaGreater={areaGreater}/>
+    </section>
+    </>
+      );
 }
 
 export default App;
