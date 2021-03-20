@@ -1,22 +1,22 @@
 import React from "react";
 import "./Search.css";
 
-function Search({ setAreaSmaller, setAreaGreater }) {
-  const handleAreaSmaller = (event) => {
-    setAreaSmaller(event.target.value);
+function Search({ setIdSmaller, setIdGreater }) {
+  const handleIdSmaller = (event) => {
+    setIdSmaller(event.target.value);
   };
-  const handleAreaGreater = (event) => {
-    setAreaGreater(event.target.value);
+  const handleIdGreater = (event) => {
+    setIdGreater(event.target.value);
   };
 
   return (
     <main className="search">
-      <form onChange={handleAreaSmaller}>
-        <label>{'Area smaller than: '}</label>
+      <form onChange={handleIdSmaller}>
+        <label>{'Id smaller than: '}</label>
         <input></input>
       </form>
-      <form onChange={handleAreaGreater}>
-        <label>{'Area greater than: '}</label>
+      <form onChange={handleIdGreater}>
+        <label>{'Id greater than: '}</label>
         <input></input>
       </form>
     </main>

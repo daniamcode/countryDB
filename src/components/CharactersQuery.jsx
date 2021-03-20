@@ -1,7 +1,7 @@
 import React from "react";
 import './CharactersQuery.css'
 
-const CharactersQuery = ( {loading, error, data, areaSmaller, areaGreater} ) => {
+const CharactersQuery = ( {loading, error, data, idSmaller, idGreater} ) => {
   
   if (loading) return <p>loading...</p>;
   if (error) return <p>Error!</p>;
@@ -9,8 +9,8 @@ const CharactersQuery = ( {loading, error, data, areaSmaller, areaGreater} ) => 
     return (
       <>
       {
-      parseInt(character.id) < areaSmaller && 
-      parseInt(character.id) > areaGreater &&
+      parseInt(character.id) < idSmaller && 
+      parseInt(character.id) > idGreater &&
       (
       <main className="box" key={character.id}>
         <section>
@@ -18,8 +18,8 @@ const CharactersQuery = ( {loading, error, data, areaSmaller, areaGreater} ) => 
         </section>
         <section className="text">
           <div>{`${character.name} (${character.species})`}</div>
-          <div>{`Population: ${character.gender}`}</div>
-          <div>{`Area: ${character.id} m²`}</div>
+          <div>{`Gender: ${character.gender}`}</div>
+          <div>{`id: ${character.id}`}</div>
         </section>
       </main>)}
       </>

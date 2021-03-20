@@ -23,26 +23,19 @@ function App() {
 
   const { loading, error, data } = useQuery(CHQuery);
 
-  const [areaSmaller, setAreaSmaller] = useState(Number.MAX_VALUE)
-  const [areaGreater, setAreaGreater] = useState(0)
+  const [idSmaller, setIdSmaller] = useState(Number.MAX_VALUE)
+  const [idGreater, setIdGreater] = useState(0)
 
-  
-  
-  // data?.characters.results.map((character) => {
-  //   let i = 0;
-  //   if(parseInt(character.id) < areaSmaller && 
-  //     parseInt(character.id) > areaGreater) i++
-  //   return i
-  // })
+
   return (
     <>
     <section className="filters">
       <h1>FILTERS</h1>
-    <Search setAreaSmaller={setAreaSmaller} setAreaGreater={setAreaGreater}/>
-      <h3>{`Number of results: ${data?.characters.results.length}`}</h3>
+    <Search setIdSmaller={setIdSmaller} setIdGreater={setIdGreater}/>
+      {/* <h3>{`Number of results: ${data?.characters.results.length}`}</h3> */}
     </section>
     <section className="main">
-      <CharactersQuery loading={loading} error={error} data={data} areaSmaller={areaSmaller} areaGreater={areaGreater}/>
+      <CharactersQuery loading={loading} error={error} data={data} idSmaller={idSmaller} idGreater={idGreater}/>
     </section>
     </>
       );
