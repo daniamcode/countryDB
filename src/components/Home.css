@@ -1,5 +1,5 @@
 .filters {
-  margin: 5vw;
+  margin: 3vw 5vw;
   background: #7EF1AE;
   height: 21vh;
 }
@@ -13,5 +13,5 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: 5vw;
+  margin: 3vw 5vw;
 }

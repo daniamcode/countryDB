@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  background: #7EF1AE;
+  padding: 0 4vw;
+}
+
+.separator {
+    flex-grow: 1;
+  }
+
+.favourites__link {
+  margin-left: 2vw;
+}

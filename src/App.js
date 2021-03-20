@@ -1,51 +1,24 @@
-import React, {useState} from "react";
-import './App.css';
-import CharactersQuery from './components/CharactersQuery';
-import Search from './components/Search';
-import { gql, useQuery } from "@apollo/client";
+import React from 'react';
+import Header from './components/Header'
+import Home from './components/Home'
+import Favourites from './components/Favourites'
+import { Route, Switch } from 'react-router-dom';
 
-    
-function App() {
-  const CHQuery = gql`
-  {
-    characters {
-      results {
-        id
-        name
-        gender
-        image
-        status
-        species
-      }
-    }
-  }
-`;
 
-  const { loading, error, data } = useQuery(CHQuery);
-
-  const [areaSmaller, setAreaSmaller] = useState(Number.MAX_VALUE)
-  const [areaGreater, setAreaGreater] = useState(0)
-
-  
-  
-  // data?.characters.results.map((character) => {
-  //   let i = 0;
-  //   if(parseInt(character.id) < areaSmaller && 
-  //     parseInt(character.id) > areaGreater) i++
-  //   return i
-  // })
+function App(props) {
   return (
-    <>
-    <section className="filters">
-      <h1>FILTERS</h1>
-    <Search setAreaSmaller={setAreaSmaller} setAreaGreater={setAreaGreater}/>
-      <h3>{`Number of results: ${data?.characters.results.length}`}</h3>
-    </section>
-    <section className="main">
-      <CharactersQuery loading={loading} error={error} data={data} areaSmaller={areaSmaller} areaGreater={areaGreater}/>
-    </section>
-    </>
-      );
+    <div className="container">
+      <Header />
+
+      <div>
+			<Switch>
+				<Route exact path="/" component={Home} />
+				<Route path="/favourites" component={Favourites} />
+			</Switch>
+			
+		</div>
+    </div>
+  );
 }
 
 export default App;
