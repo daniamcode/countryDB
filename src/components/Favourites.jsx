@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import "./Favourites.css";
+import "./styles/Favourites.css";
 import Grid from './Grid'
 
 const Favourites = () => {
