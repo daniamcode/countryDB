@@ -11,3 +11,11 @@
 .favourites__link {
   margin-left: 2vw;
 }
+
+.header__link {
+  text-decoration: none;
+}
+
+.header__link:focus {
+  color: red;
+}

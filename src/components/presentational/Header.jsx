@@ -7,10 +7,10 @@ const Header = () => {
     <section className="header">
       <p>CharactersDB</p>
       <div className="separator"></div>
-      <Link to="/">
+      <Link className="header__link" to="/">
         <p>CHARACTERS</p>
       </Link>
-      <Link to="/favourites">
+      <Link className="header__link" to="/favourites">
         <p className="favourites__link">FAVOURITES</p>
       </Link>
     </section>
