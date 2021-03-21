@@ -1,12 +1,37 @@
 .box {
     display: flex;
-    height: 100px;
+    height: 7vw;
     margin: 1vw;
 }
 
+.image-container {
+    transform-style: preserve-3d;
+}
+
+.image-container:hover {
+    transform: rotateY(180deg);
+    margin-top: 7vw;
+}
+
 .flag {
-    width: 150px;
-    height: 100px;
+    width: 10vw;
+    height: 7vw;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.like-icon {
+    position: absolute;
+    background-image: url(../../icons/red-heart.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 10vw;
+    height: 7vw;
+    margin-top: -14vw;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
 }
 
 .text {
@@ -18,3 +43,4 @@
     width: 200px;
     text-align: center;
 }
+

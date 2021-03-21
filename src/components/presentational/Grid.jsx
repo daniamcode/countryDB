@@ -5,8 +5,9 @@ import '../styles/Grid.css'
 const Grid = ({item, handleFavourites}) => {
   return (
     <section className="box" key={item.id}>
-      <div>
-        <img onClick={handleFavourites} className="flag" src={item.image} alt={item.name} />
+      <div className="image-container">
+        <img className="flag" src={item.image} alt={item.name} />
+        <div onClick={handleFavourites} className="like-icon"></div>
       </div>
       <div className="text">
         <div>{`${item.name} (${item.species})`}</div>

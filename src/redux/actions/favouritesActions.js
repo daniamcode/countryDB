@@ -9,7 +9,6 @@ export const addFavourite = (character) => {
 }
 
 export const deleteFavourite = (id) => {
-    console.log(id)
     return ({
         type: actionTypes.DELETE_FAVOURITE,
         payload: id
