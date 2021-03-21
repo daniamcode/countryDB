@@ -1,5 +1,6 @@
 const actionTypes = {
-    LOAD_FAVOURITES: "LOAD_FAVOURITES"
-}
+  ADD_FAVOURITE: "ADD_FAVOURITE",
+  DELETE_FAVOURITE: "DELETE_FAVOURITE",
+};
 
-export default actionTypes
+export default actionTypes;

@@ -1,16 +1,20 @@
 import React from "react";
-import './CharactersQuery.css'
+import './CharactersQuery.css';
+import { useDispatch } from "react-redux";
+import {addFavourite} from '../redux/actions/favouritesActions';
 
 const CharactersQuery = ( {loading, error, data, idSmaller, idGreater} ) => {
-  
-
-  const handleFavourites = () => {
-    console.log('test')
-  }
+  let dispatch = useDispatch();
 
   if (loading) return <p>loading...</p>;
   if (error) return <p>Error!</p>;
   return data.characters.results.map((character) => {
+    const handleFavourites = (event) => {
+      event.preventDefault();
+      dispatch(addFavourite(character));
+  
+  
+    }
     return (
       <>
       {

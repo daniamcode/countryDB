@@ -1,9 +1,9 @@
 import actionTypes from "./actionTypes";
 
 
-export const loadFavourites = (favourites) => {
+export const addFavourite = (character) => {
     return ({
-        type: actionTypes.LOAD_FAVOURITES,
-        payload: favourites
+        type: actionTypes.ADD_FAVOURITE,
+        payload: {character}
     });
 }

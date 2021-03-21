@@ -1,11 +1,11 @@
 import actionTypes from '../actions/actionTypes';
 
-const favouritesReducers = (state = {}, action = {}) => {
+const favouritesReducers = (state = {favourites:[]}, action = {}) => {
     switch (action.type) {
-        case actionTypes.LOAD_FAVOURITES:
+        case actionTypes.ADD_FAVOURITE:
         return {
           ...state,
-          favourites: action.payload
+          favourites: [...state.favourites, action.payload]
         };
       default:
         return state;

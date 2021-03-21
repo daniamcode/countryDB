@@ -34,7 +34,7 @@ const Home = () => {
     <Search setIdSmaller={setIdSmaller} setIdGreater={setIdGreater}/>
       {/* <h3>{`Number of results: ${data?.characters.results.length}`}</h3> */}
     </section>
-    <section className="main">
+    <section className="home__main">
       <CharactersQuery loading={loading} error={error} data={data} idSmaller={idSmaller} idGreater={idGreater}/>
     </section>
     </>

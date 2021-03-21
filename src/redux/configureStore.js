@@ -4,7 +4,6 @@ import thunk from 'redux-thunk';
 
 
 const initialState = {
-    favouritesReducer: {}
   };
 
 const configureStore = (initialState) => {
