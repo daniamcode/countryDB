@@ -13,7 +13,7 @@ describe('Favourites reducer', () => {
 
   
 
-  xit('should handle ADD_FAVOURITE', () => {
+  it('should handle ADD_FAVOURITE', () => {
     initialState.favouritesReducer.favourites = []
     let result = [{id: 8}]
     
