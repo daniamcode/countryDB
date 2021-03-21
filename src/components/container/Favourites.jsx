@@ -1,18 +1,27 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import "../styles/Favourites.css";
-import Grid from '../presentational/Grid'
+import Grid from '../presentational/Grid';
+import { deleteFavourite } from "../../redux/actions/favouritesActions";
+
 
 const Favourites = () => {
   const favourites = useSelector(
     (state) => state.favouritesReducer?.favourites
   );
+  let dispatch = useDispatch();
+  console.log(favourites)
+  
 
   return (
     <main className="favourites__main">
       {favourites?.map((favourite) => {
+        const handleDeleteFavourite = (event) => {
+          event.preventDefault();
+          dispatch(deleteFavourite(favourite.character.id));
+        };
         return (
-          <Grid item={favourite.character}/>
+          <Grid item={favourite.character} handleFavourites={handleDeleteFavourite}/>
         );
       })}
     </main>
