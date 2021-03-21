@@ -3,6 +3,11 @@ import './CharactersQuery.css'
 
 const CharactersQuery = ( {loading, error, data, idSmaller, idGreater} ) => {
   
+
+  const handleFavourites = () => {
+    console.log('test')
+  }
+
   if (loading) return <p>loading...</p>;
   if (error) return <p>Error!</p>;
   return data.characters.results.map((character) => {
@@ -14,7 +19,7 @@ const CharactersQuery = ( {loading, error, data, idSmaller, idGreater} ) => {
       (
       <main className="box" key={character.id}>
         <section>
-          <img className="flag" src={character.image} alt={character.name} />
+          <img onClick={handleFavourites} className="flag" src={character.image} alt={character.name} />
         </section>
         <section className="text">
           <div>{`${character.name} (${character.species})`}</div>

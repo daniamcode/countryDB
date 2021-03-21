@@ -5,7 +5,7 @@ import Search from './Search';
 import { gql, useQuery } from "@apollo/client";
 
     
-function App() {
+const Home = () => {
   const CHQuery = gql`
   {
     characters {
@@ -41,4 +41,4 @@ function App() {
       );
 }
 
-export default App;
+export default Home;
