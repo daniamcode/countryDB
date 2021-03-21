@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { addFavourite } from "../../redux/actions/favouritesActions";
 import Grid from "./Grid";
 
-const CharactersQuery = ({ loading, error, data, idSmaller, idGreater }) => {
+const List = ({ loading, error, data, idSmaller, idGreater }) => {
   let dispatch = useDispatch();
 
   if (loading) return <p>loading...</p>;
@@ -24,4 +24,4 @@ const CharactersQuery = ({ loading, error, data, idSmaller, idGreater }) => {
   });
 };
 
-export default CharactersQuery;
+export default List;

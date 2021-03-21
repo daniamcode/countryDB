@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import '../styles/Home.css'
-import CharactersQuery from '../presentational/CharactersQuery';
+import List from '../presentational/List';
 import Search from '../presentational/Search';
 import { gql, useQuery } from "@apollo/client";
 import resultsNumber from '../../scripts/resultsNumber'
@@ -35,7 +35,7 @@ const Home = () => {
       <h3>{`Number of results: ${resultsNumber(data?.characters?.results, idSmaller, idGreater)}`}</h3>
     </section>
     <section className="home__main">
-      <CharactersQuery loading={loading} error={error} data={data} idSmaller={idSmaller} idGreater={idGreater}/>
+      <List loading={loading} error={error} data={data} idSmaller={idSmaller} idGreater={idGreater}/>
     </section>
     </>
       );
