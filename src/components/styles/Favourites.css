@@ -4,24 +4,3 @@
     flex-wrap: wrap;
     margin: 3vw 5vw;
 }
-
-.box {
-    display: flex;
-    height: 100px;
-    margin: 1vw;
-}
-
-.flag {
-    width: 150px;
-    height: 100px;
-}
-
-.text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #7EF1AE;
-    width: 200px;
-    text-align: center;
-}
