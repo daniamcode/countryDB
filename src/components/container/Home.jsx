@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import './styles/Home.css'
-import CharactersQuery from './CharactersQuery';
-import Search from './Search';
+import '../styles/Home.css'
+import CharactersQuery from '../presentational/CharactersQuery';
+import Search from '../presentational/Search';
 import { gql, useQuery } from "@apollo/client";
 
     

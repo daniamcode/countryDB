@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './components/Header'
-import Home from './components/Home'
-import Favourites from './components/Favourites'
+import Header from './components/presentational/Header'
+import Home from './components/container/Home'
+import Favourites from './components/container/Favourites'
 import { Route, Switch } from 'react-router-dom';
 
 

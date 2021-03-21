@@ -1,7 +1,7 @@
 import React from "react";
-import "./styles/CharactersQuery.css";
+import "../styles/CharactersQuery.css";
 import { useDispatch } from "react-redux";
-import { addFavourite } from "../redux/actions/favouritesActions";
+import { addFavourite } from "../../redux/actions/favouritesActions";
 import Grid from "./Grid";
 
 const CharactersQuery = ({ loading, error, data, idSmaller, idGreater }) => {
