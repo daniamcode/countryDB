@@ -3,6 +3,7 @@ import '../styles/Home.css'
 import CharactersQuery from '../presentational/CharactersQuery';
 import Search from '../presentational/Search';
 import { gql, useQuery } from "@apollo/client";
+import resultsNumber from '../../scripts/resultsNumber'
 
     
 const Home = () => {
@@ -26,13 +27,12 @@ const Home = () => {
   const [idSmaller, setIdSmaller] = useState(Number.MAX_VALUE)
   const [idGreater, setIdGreater] = useState(0)
 
-
   return (
     <>
     <section className="filters">
       <h1>FILTERS</h1>
     <Search setIdSmaller={setIdSmaller} setIdGreater={setIdGreater}/>
-      {/* <h3>{`Number of results: ${data?.characters.results.length}`}</h3> */}
+      <h3>{`Number of results: ${resultsNumber(data?.characters?.results, idSmaller, idGreater)}`}</h3>
     </section>
     <section className="home__main">
       <CharactersQuery loading={loading} error={error} data={data} idSmaller={idSmaller} idGreater={idGreater}/>

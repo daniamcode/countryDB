@@ -14,6 +14,8 @@ const Favourites = () => {
   
 
   return (
+    <>
+    <h1 className="favourites__title">{`Showing ${favourites.length} results`}</h1>
     <main className="favourites__main">
       {favourites?.map((favourite) => {
         const handleDeleteFavourite = (event) => {
@@ -25,6 +27,7 @@ const Favourites = () => {
         );
       })}
     </main>
+    </>
   );
 };
 

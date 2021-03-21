@@ -17,5 +17,5 @@
 }
 
 .header__link:focus {
-  color: red;
+  color: green;
 }
