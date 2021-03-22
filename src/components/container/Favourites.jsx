@@ -9,6 +9,10 @@ const Favourites = () => {
   const favourites = useSelector(
     (state) => state.favouritesReducer?.favourites
   );
+  const state = useSelector(
+    (state) => state
+  );
+  console.log(state)
   let dispatch = useDispatch();
   console.log(favourites)
   

@@ -7,7 +7,7 @@ import resultsNumber from '../../scripts/resultsNumber'
 
     
 const Home = () => {
-  const CHQuery = gql`
+  const ListQuery = gql`
   {
     characters {
       results {
@@ -22,7 +22,7 @@ const Home = () => {
   }
 `;
 
-  const { loading, error, data } = useQuery(CHQuery);
+  const { loading, error, data } = useQuery(ListQuery);
 
   const [idSmaller, setIdSmaller] = useState(Number.MAX_VALUE)
   const [idGreater, setIdGreater] = useState(0)

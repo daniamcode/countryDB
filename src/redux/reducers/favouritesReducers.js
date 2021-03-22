@@ -1,7 +1,6 @@
 import actionTypes from '../actions/actionTypes';
 
 const favouritesReducers = (state = {favourites:[]}, action = {}) => {
-  console.log(state)
     switch (action.type) {
         case actionTypes.ADD_FAVOURITE:
         return {

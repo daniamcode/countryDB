@@ -14,8 +14,8 @@ describe('Favourites reducer', () => {
   
 
   it('should handle ADD_FAVOURITE', () => {
-    initialState.favouritesReducer.favourites = []
-    let result = [{id: 8}]
+    let initialState = {favouritesReducer: {favourites: [{character: {id: 1}}, {character: {id: 2}}]}}
+    let result = {favourites: [{character: {id: 1}}, {character: {id: 2}}, {character: {id: 3}}]}
     
     expect(
       favouritesReducers(
@@ -24,7 +24,26 @@ describe('Favourites reducer', () => {
         },
         {
           type: actionTypes.ADD_FAVOURITE,
-          payload: {id: 8}
+          payload: {character: {id: 3}}
+        },
+      ),
+    ).toEqual(
+      result
+    );
+  })
+
+  it('should handle DELETE_FAVOURITE', () => {
+    let initialState = {favouritesReducer: {favourites: [{character: {id: 1}}, {character: {id: 2}}]}}
+    let result = {favourites: [{character: {id: 1}}]}
+    
+    expect(
+      favouritesReducers(
+        {
+          ...initialState.favouritesReducer,
+        },
+        {
+          type: actionTypes.DELETE_FAVOURITE,
+          payload: '2'
         },
       ),
     ).toEqual(
