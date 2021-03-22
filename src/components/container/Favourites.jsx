@@ -3,9 +3,12 @@ import { useSelector, useDispatch } from "react-redux";
 import "../styles/Favourites.css";
 import Grid from '../presentational/Grid';
 import { deleteFavourite } from "../../redux/actions/favouritesActions";
+import {toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 
 const Favourites = () => {
+  toast.configure()
   const favourites = useSelector(
     (state) => state.favouritesReducer?.favourites
   );
@@ -24,6 +27,7 @@ const Favourites = () => {
       {favourites?.map((favourite) => {
         const handleDeleteFavourite = (event) => {
           event.preventDefault();
+          toast('Removed from favourites!')
           dispatch(deleteFavourite(favourite.character.id));
         };
         return (

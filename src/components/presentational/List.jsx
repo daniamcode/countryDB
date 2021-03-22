@@ -2,9 +2,13 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { addFavourite } from "../../redux/actions/favouritesActions";
 import Grid from "./Grid";
-import '../styles/List.css'
+import '../styles/List.css';
+import {toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
+
 
 const List = ({ loading, error, data, idSmaller, idGreater }) => {
+  toast.configure()
   let dispatch = useDispatch();
 
   if (loading) return <p>loading...</p>;
@@ -14,6 +18,7 @@ const List = ({ loading, error, data, idSmaller, idGreater }) => {
       {data?.characters?.results?.map((character) => {
         const handleAddFavourite = (event) => {
           event.preventDefault();
+          toast('Added to favourites!')
           dispatch(addFavourite(character));
         };
         return (
