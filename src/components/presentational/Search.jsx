@@ -36,6 +36,7 @@ function Search({ setGender, setStatus, setSpecies }) {
         <select>
           <option></option>
           <option value="Human">Human</option>
+          <option value="Humanoid">Humanoid</option>
           <option value="Alien">Alien</option>
         </select>
       </form>
