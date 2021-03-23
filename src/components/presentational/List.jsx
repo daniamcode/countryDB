@@ -22,7 +22,7 @@ const List = ({ loading, error, data }) => {
         };
         return (
           <>
-            <Grid item={character} handleFavourites={handleAddFavourite} />
+            <Grid key={character.id} item={character} handleFavourites={handleAddFavourite} />
           </>
         );
       })}

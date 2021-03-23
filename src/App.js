@@ -3,17 +3,48 @@ import Header from './components/presentational/Header'
 import Home from './components/container/Home'
 import Favourites from './components/container/Favourites'
 import { Route, Switch } from 'react-router-dom';
+import { useSelector } from "react-redux";
+import { gql } from '@apollo/client';
 
 
-function App(props) {
+function App({cache}) {
+  const favourites = useSelector(
+    (state) => state.favouritesReducer?.favourites
+  );
+
+  const listQuery = gql`
+    query ($gender: String, $status: String, $species: String) {
+      characters(
+        filter: { gender: $gender, status: $status, species: $species }
+      ) {
+        results {
+          id
+          name
+          gender
+          image
+          status
+          species
+        }
+      }
+      favs @client
+    }
+  `;
+
+  cache.writeQuery({
+    query: listQuery,
+    data: {
+      favs: {favourites},
+    },
+  });
+
   return (
     <div className="container">
-      <Header />
+      <Header/>
 
       <div>
 			<Switch>
-				<Route exact path="/" component={Home} />
-				<Route path="/favourites" component={Favourites} />
+				<Route exact path="/" render={(props) => (<Home {...props} listQuery={listQuery}/>)} />
+				<Route path="/favourites" render={(props) => (<Favourites {...props} cache={cache} favs={favourites}/>)} />
 			</Switch>
 			
 		</div>

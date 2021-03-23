@@ -10,10 +10,11 @@ import configureStore, { initialState } from './redux/configureStore'
 
 const store = configureStore(initialState);
 
+const cache = new InMemoryCache();
 
 const client = new ApolloClient({
   uri: 'https://rickandmortyapi.com/graphql',
-  cache: new InMemoryCache()
+  cache
 })
 
 ReactDOM.render(
@@ -21,7 +22,7 @@ ReactDOM.render(
     <Provider store={store}>
     <ApolloProvider client={client}>
     <BrowserRouter>
-      <App />
+      <App cache={cache}/>
     </BrowserRouter>
     </ApolloProvider>
     </Provider>
