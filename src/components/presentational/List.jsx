@@ -17,7 +17,7 @@ const List = ({ loading, error, data }) => {
       {data?.characters?.results?.map((character) => {
         const handleAddFavourite = (event) => {
           event.preventDefault();
-          toast("Added to favourites!");
+          toast("Added to favourites!", {position: toast.POSITION.BOTTOM_RIGHT});
           dispatch(addFavourite(character));
         };
         return (

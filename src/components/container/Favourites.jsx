@@ -27,7 +27,7 @@ const Favourites = () => {
       {favourites?.map((favourite) => {
         const handleDeleteFavourite = (event) => {
           event.preventDefault();
-          toast('Removed from favourites!')
+          toast('Removed from favourites!', {position: toast.POSITION.BOTTOM_RIGHT})
           dispatch(deleteFavourite(favourite.character.id));
         };
         return (
