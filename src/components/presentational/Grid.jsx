@@ -12,6 +12,7 @@ const Grid = ({item, handleFavourites}) => {
       <div className="text">
         <div>{`${item?.name} (${item?.species})`}</div>
         <div>{`Gender: ${item?.gender}`}</div>
+        <div>{`Status: ${item?.status}`}</div>
         <div>{`id: ${item?.id}`}</div>
       </div>
     </section>
