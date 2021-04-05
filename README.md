@@ -1,3 +1,64 @@
+# Proppos frontend technical test
+
+Objectives
+Test the skills in ReactJS.
+Test the ability of the candidate to develop functionalities defined in a design.
+Test the ability of the candidate to face problems.
+Test how the candidate resolves functionalities that are not designed and how these functionalities affect the user experience.
+Test the ability to create clean code and documentation.
+Is considered as a bonus to develop the challenge without CSS frameworks like bootstrap or material design.
+
+Test description
+The objective of the test is to validate the skills of the candidate with the technologies required by the job position and assess how the candidate faces problems. The test consists of two possible challenges, the candidate needs to accomplish a minimum of one challenge.
+
+The challenges
+My game page
+This challenge is a web application that uses IGDB public API to show data.
+Challenge requirements
+Follow the design on this link.
+The features that are not designed. The candidate should give full rein to their imagination.
+Create the React application with the following pages:
+Featured games: This shows the list of games with the highest number of followers.
+Most recent games: Shows the most recent games that have been released (The game must have been released on any platform or country)
+Search games: A search bar that allows users to search games by their name.
+Upload the project to a public repository of your choice (Github, GitLab, etc)
+Publish the project live to preview it (Heroku, surge.sh)
+
+Optional requirements
+Use webpack instead of bundlers like create-react-app.
+Use Redux to manage the global state of the application
+Test your application with Jest or any test suite.
+
+Any addition to the application is welcome, the IGDB API is bast and flexible, you can add more sections or data to the existing pages if you want.
+Challenge useful links
+IGDB api documentation - https://api-docs.igdb.com/#about
+Challenge designs - https://www.figma.com/file/LjvH5ItEQaG0NkavPBAivu/DESIGN_REACT_CHALLENGE?node-id=6%3A0
+
+
+## CountryDB
+This challenge is a web application that uses the country open apollo API.
+Challenge requirements
+Follow the design on this link.
+Create the React application with the following pages:
+Countries page: On this page, the user should be able to filter at least one pair of filters simultaneously, the user should be able to add countries to favorites, and stored them in the apollo cache.
+Favorites: On this page, the user should be able to see his favorite countries and remove them from his favorites
+Upload the project to a public repository of your choice (Github, GitLab, etc)
+Publish the project live to preview it (Heroku, surge.sh)
+Optional requirements
+Use webpack instead of bundlers like create-react-app.
+Use apollo cache to store favorites.
+Test your application with Jest or any test suite.
+
+Any addition to the application is welcome.
+Challenge useful links
+Countries apollo playground - https://countries-274616.ew.r.appspot.com/
+Challenge designs - https://www.figma.com/file/LQQ2fb0vTKsn6G4JxtRPWX/DESIGN_REACT_APOLLO_CHALLENGE?node-id=0%3A3
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
