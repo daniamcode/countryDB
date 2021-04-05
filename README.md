@@ -21,7 +21,7 @@ This challenge is a web application that uses IGDB public API to show data.
 
 Challenge requirements
 
-Follow the design on this link (https://www.figma.com/file/LjvH5ItEQaG0NkavPBAivu/DESIGN_REACT_CHALLENGE?node-id=6%3A0)\
+Follow the design on this link (https://www.figma.com/file/LjvH5ItEQaG0NkavPBAivu/DESIGN_REACT_CHALLENGE?node-id=6%3A0)
 The features that are not designed. The candidate should give full rein to their imagination.\
 Create the React application with the following pages:\
 Featured games: This shows the list of games with the highest number of followers.\
@@ -40,7 +40,7 @@ Any addition to the application is welcome, the IGDB API is bast and flexible, y
 
 Challenge useful links:
 
-IGDB api documentation - https://api-docs.igdb.com/#about\
+IGDB api documentation - https://api-docs.igdb.com/#about
 Challenge designs - https://www.figma.com/file/LjvH5ItEQaG0NkavPBAivu/DESIGN_REACT_CHALLENGE?node-id=6%3A0
 
 
@@ -50,7 +50,7 @@ This challenge is a web application that uses the country open apollo API.
 
 Challenge requirements
 
-Follow the design on this link (https://www.figma.com/file/LQQ2fb0vTKsn6G4JxtRPWX/DESIGN_REACT_APOLLO_CHALLENGE?node-id=0%3A3)\
+Follow the design on this link (https://www.figma.com/file/LQQ2fb0vTKsn6G4JxtRPWX/DESIGN_REACT_APOLLO_CHALLENGE?node-id=0%3A3)
 Create the React application with the following pages:\
 Countries page: On this page, the user should be able to filter at least one pair of filters simultaneously, the user should be able to add countries to favorites, and stored them in the apollo cache.\
 Favorites: On this page, the user should be able to see his favorite countries and remove them from his favorites\
@@ -65,7 +65,8 @@ Any addition to the application is welcome.
 
 Challenge useful links:
 
-Countries apollo playground - https://countries-274616.ew.r.appspot.com/\
+Countries apollo playground - https://countries-274616.ew.r.appspot.com/
+
 Challenge designs - https://www.figma.com/file/LQQ2fb0vTKsn6G4JxtRPWX/DESIGN_REACT_APOLLO_CHALLENGE?node-id=0%3A3
 
 
