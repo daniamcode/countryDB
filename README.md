@@ -1,6 +1,6 @@
 # Proppos frontend technical test
 
-Objectives\
+Objectives
 
 Test the skills in ReactJS.\
 Test the ability of the candidate to develop functionalities defined in a design.\
@@ -9,13 +9,13 @@ Test how the candidate resolves functionalities that are not designed and how th
 Test the ability to create clean code and documentation.\
 Is considered as a bonus to develop the challenge without CSS frameworks like bootstrap or material design.\
 
-Test description\
+Test description
 
 The objective of the test is to validate the skills of the candidate with the technologies required by the job position and assess how the candidate faces problems. The test consists of two possible challenges, the candidate needs to accomplish a minimum of one challenge.\
 
-The challenges\
+The challenges
 
-My game page\
+My game page
 
 This challenge is a web application that uses IGDB public API to show data.\
 Challenge requirements\
@@ -28,7 +28,7 @@ Search games: A search bar that allows users to search games by their name.\
 Upload the project to a public repository of your choice (Github, GitLab, etc)\
 Publish the project live to preview it (Heroku, surge.sh)\
 
-Optional requirements\
+Optional requirements
 
 Use webpack instead of bundlers like create-react-app.\
 Use Redux to manage the global state of the application\
@@ -36,7 +36,7 @@ Test your application with Jest or any test suite.\
 
 Any addition to the application is welcome, the IGDB API is bast and flexible, you can add more sections or data to the existing pages if you want.\
 
-Challenge useful links\
+Challenge useful links:
 
 IGDB api documentation - https://api-docs.igdb.com/#about\
 Challenge designs - https://www.figma.com/file/LjvH5ItEQaG0NkavPBAivu/DESIGN_REACT_CHALLENGE?node-id=6%3A0\
@@ -46,7 +46,7 @@ Challenge designs - https://www.figma.com/file/LjvH5ItEQaG0NkavPBAivu/DESIGN_REA
 
 This challenge is a web application that uses the country open apollo API.\
 
-Challenge requirements\
+Challenge requirements
 
 Follow the design on this link (https://www.figma.com/file/LQQ2fb0vTKsn6G4JxtRPWX/DESIGN_REACT_APOLLO_CHALLENGE?node-id=0%3A3)\
 Create the React application with the following pages:\
@@ -59,9 +59,9 @@ Use webpack instead of bundlers like create-react-app.\
 Use apollo cache to store favorites.\
 Test your application with Jest or any test suite.\
 
-Any addition to the application is welcome.\
+Any addition to the application is welcome.
 
-Challenge useful links\
+Challenge useful links:
 
 Countries apollo playground - https://countries-274616.ew.r.appspot.com/\
 Challenge designs - https://www.figma.com/file/LQQ2fb0vTKsn6G4JxtRPWX/DESIGN_REACT_APOLLO_CHALLENGE?node-id=0%3A3\
