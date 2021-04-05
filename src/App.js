@@ -13,10 +13,17 @@ function App({cache}) {
   );
 
   const listQuery = gql`
-    query ($gender: String, $status: String, $species: String) {
+    query ($gender: String, $status: String, $species: String, $page: Int) {
       characters(
+        page: $page
         filter: { gender: $gender, status: $status, species: $species }
       ) {
+        info {
+          count
+          pages
+          next
+          prev
+        }
         results {
           id
           name

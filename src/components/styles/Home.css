@@ -8,3 +8,17 @@
   margin-left: 3vw;
   padding-top: 1vh;
 }
+
+.pagination {
+  margin: 3vw 5vw 7vw 5vw;
+  height: 3vh;
+  text-align: center;
+}
+
+.pagination button {
+  background: #7EF1AE;
+  margin: 0 1vw;
+  height: 2vw;
+  width: 5vw;
+  cursor: pointer;
+}
